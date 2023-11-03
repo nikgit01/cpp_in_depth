@@ -24,11 +24,19 @@ public:
     {
         cout << "a= " << a << " b= " << b << endl;
     }
+    // Operator+ as a memmber
     complex operator+(complex C)
     {
         complex temp(0,0);
         temp.a=a+C.a;
         temp.b=b+C.b;
+        return temp;
+    }
+    complex operator-()
+    {
+        complex temp;
+        temp.a=-a;
+        temp.b=-b;
         return temp;
     }
 }; 
@@ -37,9 +45,9 @@ int main()
     complex c1(3,4), c2(5,6), c3;
 
     cout<<endl;
-    c3=c1+c2;    //c3=c1.operator+(c2);
+    c3=c1+c2; //c3=c1.operator+(c2);
     c3.show_data();
-    // c3=c1.operator+(c2);
-    // c3.show_data();
+    c3=-c1; // c3=c1.operator+(c2);
+
     return 0;
 }

@@ -4,15 +4,21 @@ class complex
 {
 private:
     int a, b;
+
 public:
-    complex() {}   
-    complex(int x) {a=x; b=0;}
-    complex(int a, int b): a(a),b(b) 
-    {}
+    complex() {}
+    complex(int x)
+    {
+        a = x;
+        b = 0;
+    }
+    complex(int a, int b) : a(a), b(b)
+    {
+    }
     complex(complex &C)
     {
-        a=C.a;
-        b=C.b;
+        a = C.a;
+        b = C.b;
     }
 
     void set_data(int x, int y)
@@ -24,7 +30,7 @@ public:
     {
         cout << "a= " << a << " b= " << b << endl;
     }
-    
+
     // complex operator+(complex C)               // Operator+ as a memmber
     // {
     //     complex temp(0,0);
@@ -32,7 +38,7 @@ public:
     //     temp.b=b+C.b;
     //     return temp;
     // }
-    friend complex operator+(complex ,complex);   // Declare Friend Opreator
+    friend complex operator+(complex, complex); // Declare Friend Opreator
     friend complex operator-(complex);
     // complex operator-()                        // Opreator- as a member
     // {
@@ -41,30 +47,30 @@ public:
     //     temp.b=-b;
     //     return temp;
     // }
-}; 
-    complex operator+(complex X, complex Y)       // defining Friend Opreator
-    {
-        complex temp(0,0);
-        temp.a= X.a + Y.a;
-        temp.b = X.b + Y.b;
-        return temp;
-    }
-    complex operator-(complex X)
-    {
-        complex temp;
-        temp.a=-X.a;
-        temp.b=-X.b;
-        return temp;
-    }
+};
+complex operator+(complex X, complex Y) // defining Friend Opreator
+{
+    complex temp(0, 0);
+    temp.a = X.a + Y.a;
+    temp.b = X.b + Y.b;
+    return temp;
+}
+complex operator-(complex X)
+{
+    complex temp;
+    temp.a = -X.a;
+    temp.b = -X.b;
+    return temp;
+}
 
 int main()
 {
-    complex c1(3,4), c2(5,6), c3;
+    complex c1(3, 4), c2(5, 6), c3;
 
-    cout<<endl;
-    c3=c1+c2;  //c3=operator+(.c1, c2);
+    cout << endl;
+    c3 = c1 + c2; // c3=operator+(.c1, c2);
     c3.show_data();
-    c3=-c1;    // c3=operator+(c2);
+    c3 = -c1; // c3=operator+(c2);
 
     return 0;
 }

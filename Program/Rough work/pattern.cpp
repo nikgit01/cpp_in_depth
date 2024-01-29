@@ -7,7 +7,7 @@ int main()
         {
             for(j=1;j<=5;j++)
             {
-                cout<<"*";
+                cout<<"*"; //checking push
             }
             cout<<endl;
         }

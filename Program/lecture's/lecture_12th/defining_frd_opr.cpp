@@ -70,7 +70,7 @@ int main()
     cout << endl;
     c3 = c1 + c2; // c3=operator+(.c1, c2);
     c3.show_data();
-    c3 = -c1; // c3=operator+(c2);
+    c3 = -c1; // c3=operator-(c2);
 
     return 0;
 }

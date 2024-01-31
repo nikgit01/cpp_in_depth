@@ -55,9 +55,9 @@ ostream& operator<<(ostream &dout,complex C) //Defination of << (exertion opreat
     dout<<"\na="<<C.a<<"b="<<C.b;
     return dout;
 }
-istream& operator>>(istream& din, complex &C)
+istream& operator>>(istream& din, complex &C) //Defination of >> (insertion) opreator)
 {
-    din>>C.a>>C.b;
+    din>>C.a>>C.b;   
 }
  
 complex operator+(complex X, complex Y) // defining Friend Opreator

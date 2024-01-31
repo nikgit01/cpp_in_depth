@@ -47,7 +47,19 @@ public:
     //     temp.b=-b;
     //     return temp;
     // }
+    friend ostream& operator<<(ostream&, complex); // Declareing Friend operator for << (exertion opreator)
+    friend istream& operator>>(istream&, complex&)
 };
+ostream& operator<<(ostream &dout,complex C) //Defination of << (exertion opreator)
+{
+    dout<<"\na="<<C.a<<"b="<<C.b;
+    return dout;
+}
+istream& operator>>(istream& din, complex &C)
+{
+    din>>C.a>>C.b;
+}
+ 
 complex operator+(complex X, complex Y) // defining Friend Opreator
 {
     complex temp(0, 0);

@@ -30,6 +30,12 @@ public:
     {
         cout << "a= " << a << " b= " << b << endl;
     }
+    complex sumGreater(complex C){
+        if((a+b)>(C.a+C.b))
+            return *this;
+        else
+            return C;
+    }
 
     // complex operator+(complex C)               // Operator+ as a memmber
     // {

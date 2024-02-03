@@ -30,9 +30,9 @@ public:
     {
         cout << "a= " << a << " b= " << b << endl;
     }
-    complex sumGreater(complex C){  
+    complex sumGreater(complex C){  // use of This pointer (this->)
         if((a+b)>(C.a+C.b))
-            return *this;   // use of This pointer (this->)  
+            return *this;   // use of This pointer (this->)   // (This pointer contains the address of caller object {current object} )
         else
             return C;
     }

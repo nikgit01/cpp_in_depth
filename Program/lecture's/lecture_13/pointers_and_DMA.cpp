@@ -23,16 +23,16 @@ public:
 
     void set_data(int a, int b) 
     {
-        this->a = a;          // This pointer (this->)  to resolve name conflict
+        this->a = a;          // This pointer (this->)  to resolve name conflict //...........................................
         this->b = b;
     }
     void show_data()
     {
         cout << "a= " << a << " b= " << b << endl;
     }
-    complex sumGreater(complex C){
+    complex sumGreater(complex C){  
         if((a+b)>(C.a+C.b))
-            return *this;
+            return *this;   // use of This pointer (this->)  
         else
             return C;
     }
@@ -53,20 +53,20 @@ public:
     //     temp.b=-b;
     //     return temp;
     // }
-    friend ostream& operator<<(ostream&, complex); // Declareing Friend operator for << (exertion opreator)
+    friend ostream& operator<<(ostream&, complex); 
     friend istream& operator>>(istream&, complex&)
 };
-ostream& operator<<(ostream &dout,complex C) //Defination of << (exertion opreator)
+ostream& operator<<(ostream &dout,complex C) 
 {
     dout<<"\na="<<C.a<<"b="<<C.b;
     return dout;
 }
-istream& operator>>(istream& din, complex &C) //Defination of >> (insertion) opreator)
+istream& operator>>(istream& din, complex &C) 
 {
     din>>C.a>>C.b;   
 }
  
-complex operator+(complex X, complex Y) // defining Friend Opreator
+complex operator+(complex X, complex Y) 
 {
     complex temp(0, 0);
     temp.a = X.a + Y.a;

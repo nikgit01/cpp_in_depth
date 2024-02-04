@@ -54,7 +54,7 @@ public:
     //     return temp;
     // }
     friend ostream& operator<<(ostream&, complex); 
-    friend istream& operator>>(istream&, complex&)
+    friend istream& operator>>(istream&, complex&);
 };
 ostream& operator<<(ostream &dout,complex C) 
 {
